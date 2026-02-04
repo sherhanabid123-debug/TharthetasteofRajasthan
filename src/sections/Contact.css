@@ -1,0 +1,113 @@
+.contact-section {
+    background-color: var(--color-bg-light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.address-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.address-card p {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.address-card:hover h3 {
+    color: var(--color-primary);
+}
+
+.address-card:hover p {
+    color: var(--color-text-main);
+}
+
+.phone-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.phone-card p {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.phone-card:hover h3 {
+    color: var(--color-primary);
+}
+
+.phone-card:hover p {
+    color: var(--color-text-main);
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-main);
+}
+
+.contact-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.map-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    height: 100%;
+    position: relative;
+    /* Needed for absolute positioning of overlay */
+}
+
+.map-overlay-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-wrapper {
+        min-height: 300px;
+    }
+}

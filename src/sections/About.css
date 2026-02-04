@@ -1,0 +1,266 @@
+/* About Section CSS */
+.about-section {
+    position: relative;
+    background-color: var(--color-bg-light);
+    overflow: hidden;
+    padding: var(--spacing-xl) 0;
+}
+
+/* Background Pattern (Subtle Mandala/Royal motif hint) */
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, var(--color-secondary) 0%, transparent 70%);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Text Column */
+.about-content {
+    padding-right: var(--spacing-md);
+}
+
+.section-subtitle {
+    display: block;
+    color: var(--color-accent);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.section-title {
+    font-size: 3rem;
+    color: var(--color-primary);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+}
+
+.divider-gold {
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-gold);
+    margin-bottom: var(--spacing-md);
+    border-radius: 2px;
+}
+
+.about-text {
+    font-family: var(--font-body);
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.about-text strong {
+    color: var(--color-primary-dark);
+}
+
+/* Features List */
+.about-features {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-primary-dark);
+    font-weight: 500;
+}
+
+.feature-icon {
+    color: var(--color-accent);
+    font-size: 1.2rem;
+}
+
+/* Discovery Button */
+.btn-gold {
+    background: transparent;
+    border: 1px solid var(--color-accent);
+    padding: 12px 32px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-primary-dark);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-gold::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--color-accent);
+    z-index: -1;
+    transition: var(--transition-normal);
+}
+
+.btn-gold:hover {
+    color: #fff;
+    border-color: var(--color-accent);
+}
+
+.btn-gold:hover::before {
+    width: 100%;
+}
+
+/* Image Column & Composition */
+.about-image-column {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-composition {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.image-wrapper {
+    position: relative;
+    z-index: 2;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transform: translateX(-10px) translateY(-10px);
+    transition: var(--transition-slow);
+}
+
+.image-wrapper:hover {
+    transform: translateX(-10px) translateY(-15px);
+    box-shadow: var(--shadow-hover);
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.8s ease;
+}
+
+.image-wrapper:hover .main-image {
+    transform: scale(1.05);
+}
+
+/* Decorative Frame Behind */
+.decorative-frame {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid var(--color-accent);
+    z-index: 1;
+    transition: var(--transition-normal);
+}
+
+/* Experience Badge */
+.experience-badge {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 3;
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 140px;
+    transition: var(--transition-normal);
+}
+
+.experience-badge:hover {
+    transform: translateY(-5px);
+    background: var(--color-primary-dark);
+}
+
+.experience-badge .years {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 5px;
+}
+
+.experience-badge .label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-content {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .divider-gold {
+        margin: 0 auto 2rem;
+    }
+
+    .about-features {
+        justify-content: center;
+    }
+
+    .image-composition {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .experience-badge {
+        bottom: -20px;
+        left: -10px;
+        padding: 1rem;
+        min-width: 110px;
+    }
+
+    .experience-badge .years {
+        font-size: 2rem;
+    }
+}
