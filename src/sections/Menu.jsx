@@ -4,7 +4,7 @@ import Reveal from '../components/Reveal';
 import { menuCategories, menuItems } from '../data/menu';
 
 const Menu = () => {
-    const [activeCategory, setActiveCategory] = useState('thalis');
+    const [activeCategory, setActiveCategory] = useState('musthaves');
 
     return (
         <section id="menu" className="section menu-section">
@@ -48,8 +48,12 @@ const Menu = () => {
 
                 <Reveal delay={400}>
                     <div className="menu-cta text-center">
-                        <a href="https://www.zomato.com/bangalore/thar-the-taste-of-rajasthan-koramangala-5th-block-bangalore" target="_blank" rel="noopener noreferrer" className="premium-menu-btn">
-                            <span className="btn-text">View Full Menu on Zomato</span>
+                        <a href="https://www.swiggy.com/city/bangalore/thar-the-taste-of-rajasthan-koramangala-jyothi-niwas-college-toad-rest414271" target="_blank" rel="noopener noreferrer" className="premium-menu-btn">
+                            <span className="btn-text">View on Swiggy</span>
+                            <span className="btn-shine"></span>
+                        </a>
+                        <a href="/menu.pdf" target="_blank" rel="noopener noreferrer" className="premium-menu-btn premium-menu-btn-secondary">
+                            <span className="btn-text">View Our Menu</span>
                             <span className="btn-shine"></span>
                         </a>
                     </div>

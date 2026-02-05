@@ -7,14 +7,19 @@
 
 .footer-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-bottom: var(--spacing-lg);
 }
 
-.footer-col h3 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.footer-logo-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    /* Optional shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .footer-col h4 {
@@ -87,4 +92,80 @@
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 0.9rem;
     opacity: 0.8;
+}
+
+.footer-hours {
+    background: rgba(0, 0, 0, 0.03);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--color-primary);
+}
+
+.footer-subhead {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--color-primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.inline-icon {
+    vertical-align: middle;
+    margin-right: 0.3rem;
+    opacity: 0.7;
+}
+
+.text-sm {
+    font-size: 0.85rem;
+}
+
+.contact-list li {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.footer-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.8rem;
+    color: white !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+    width: 100%;
+    margin-top: 0;
+}
+
+.footer-link-btn:hover {
+    opacity: 0.9 !important;
+    transform: translateY(-1px);
+}
+
+.delivery-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    width: 100%;
+}
+
+.btn-swiggy {
+    background-color: #fc8019;
+    /* Swiggy Orange */
+}
+
+.btn-zomato {
+    background-color: #cb202d;
+    /* Zomato Red */
 }

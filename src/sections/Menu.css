@@ -125,11 +125,19 @@
 .text-center {
     text-align: center;
 }
+
+.menu-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
 /* Premium Menu Button */
 .premium-menu-btn {
     display: inline-block;
     position: relative;
-    padding: 1rem 3rem;
+    padding: 1rem 2.5rem;
     background: linear-gradient(135deg, #d4a017 0%, #b8860b 50%, #d4a017 100%);
     color: #3e2723;
     font-family: var(--font-heading);
@@ -151,13 +159,26 @@
     background: linear-gradient(135deg, #e5b73b 0%, #d4a017 100%);
 }
 
+.premium-menu-btn-secondary {
+    background: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-primary);
+    box-shadow: none;
+}
+
+.premium-menu-btn-secondary:hover {
+    background: var(--color-accent);
+    color: var(--color-primary-dark);
+    box-shadow: 0 8px 25px rgba(212, 160, 23, 0.3);
+}
+
 .premium-menu-btn .btn-shine {
     position: absolute;
     top: 0;
     left: -100%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
     transform: skewX(-20deg);
     transition: 0.5s;
 }

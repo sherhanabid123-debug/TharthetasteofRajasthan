@@ -1,21 +1,19 @@
 import React from 'react';
 import './Footer.css';
 import { Instagram, MapPin, Phone, Clock } from 'lucide-react';
+import logo from '../assets/logo.jpg';
 
 const Footer = ({ onOpenOrder }) => {
     return (
         <footer className="footer" id="contact">
             <div className="container footer-container">
                 <div className="footer-col">
-                    <h3>Thar</h3>
+                    <img src={logo} alt="Thar - The Taste of Rajasthan" className="footer-logo-img" />
                     <p className="footer-tagline">The Taste of Rajasthan</p>
-                    <p className="footer-desc">
-                        Authentic Rajasthani flavors in the heart of Koramangala. Experience royalty on a plate.
-                    </p>
-                    <div className="footer-socials">
-                        <a href="https://www.instagram.com/thar.restaurant/?hl=en" target="_blank" rel="noopener noreferrer">
-                            <Instagram size={24} />
-                        </a>
+                    <div className="footer-hours mt-2">
+                        <h5 className="footer-subhead">Opening Hours</h5>
+                        <p><Clock size={14} className="inline-icon" /> 11:30 AM - 11:30 PM</p>
+                        <p className="text-sm opacity-75">Daily</p>
                     </div>
                 </div>
 
@@ -38,24 +36,55 @@ const Footer = ({ onOpenOrder }) => {
                             </a>
                         </li>
                     </ul>
+                    <div className="footer-socials">
+                        <a href="https://www.instagram.com/thar.restaurant/?hl=en" target="_blank" rel="noopener noreferrer">
+                            <Instagram size={20} />
+                        </a>
+                    </div>
                 </div>
 
                 <div className="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul>
+                    <h4>Koramangala</h4>
+                    <ul className="contact-list">
                         <li>
-                            <MapPin size={18} />
+                            <MapPin size={18} className="flex-shrink-0" />
                             <span>Jyothi Nivas, 5th Block, Koramangala, Bengaluru</span>
                         </li>
                         <li>
-                            <Phone size={18} />
-                            <span>089499 36747</span>
-                        </li>
-                        <li>
-                            <Clock size={18} />
-                            <span>11:30 AM - 11:30 PM</span>
+                            <Phone size={18} className="flex-shrink-0" />
+                            <span>+91 89499 36747</span>
                         </li>
                     </ul>
+                    <div className="delivery-buttons">
+                        <a href="https://www.swiggy.com/city/bangalore/thar-the-taste-of-rajasthan-koramangala-jyothi-niwas-college-toad-rest414271" target="_blank" rel="noopener noreferrer" className="footer-link-btn btn-swiggy">
+                            Order on Swiggy
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/thar-the-taste-of-rajasthan-koramangala-5th-block-bangalore" target="_blank" rel="noopener noreferrer" className="footer-link-btn btn-zomato">
+                            Order on Zomato
+                        </a>
+                    </div>
+                </div>
+
+                <div className="footer-col">
+                    <h4>Brookfield</h4>
+                    <ul className="contact-list">
+                        <li>
+                            <MapPin size={18} className="flex-shrink-0" />
+                            <span>ITPL Main Road, Brookfield, Bengaluru</span>
+                        </li>
+                        <li>
+                            <Phone size={18} className="flex-shrink-0" />
+                            <span>+91 63624 33174</span>
+                        </li>
+                    </ul>
+                    <div className="delivery-buttons">
+                        <a href="https://www.swiggy.com/city/bangalore/thar-the-taste-of-rajasthan-marathahalli-rest1154135" target="_blank" rel="noopener noreferrer" className="footer-link-btn btn-swiggy">
+                            Order on Swiggy
+                        </a>
+                        <a href="https://www.zomato.com/bangalore/thar-the-taste-of-rajasthan-aecs-layout-bangalore" target="_blank" rel="noopener noreferrer" className="footer-link-btn btn-zomato">
+                            Order on Zomato
+                        </a>
+                    </div>
                 </div>
             </div>
             <div className="footer-bottom">

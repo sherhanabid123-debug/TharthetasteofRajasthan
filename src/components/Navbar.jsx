@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo.jpg';
 
 const Navbar = ({ onOpenOrder }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,8 +11,8 @@ const Navbar = ({ onOpenOrder }) => {
   return (
     <nav className="navbar">
       <div className="container navbar-container">
-        <a href="#" className="navbar-logo">
-          Thar <span className="logo-accent">.</span>
+        <a href="#" className="navbar-logo-link">
+          <img src={logo} alt="Thar - The Taste of Rajasthan" className="navbar-logo-img" />
         </a>
 
         <div className="navbar-toggle" onClick={toggleMenu}>

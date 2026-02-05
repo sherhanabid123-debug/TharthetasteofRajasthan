@@ -1,93 +1,39 @@
 .contact-section {
     background-color: var(--color-bg-light);
+    padding-bottom: var(--spacing-xl);
 }
 
-.contact-grid {
+.locations-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
 }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.contact-card {
+.location-card {
     background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    /* Subtle gold border */
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease;
 }
 
-.contact-card:hover {
+.location-card:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-accent);
 }
 
-.address-card {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
-
-.address-card p {
-    color: #666;
-    transition: color 0.3s ease;
-}
-
-.address-card:hover h3 {
-    color: var(--color-primary);
-}
-
-.address-card:hover p {
-    color: var(--color-text-main);
-}
-
-.phone-card {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-}
-
-.phone-card p {
-    color: #666;
-    transition: color 0.3s ease;
-}
-
-.phone-card:hover h3 {
-    color: var(--color-primary);
-}
-
-.phone-card:hover p {
-    color: var(--color-text-main);
-}
-
-.contact-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-text-main);
-}
-
-.contact-card p {
-    color: #666;
-    font-size: 0.95rem;
-}
-
-.map-wrapper {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    min-height: 400px;
-    height: 100%;
+.location-map {
+    height: 250px;
+    width: 100%;
     position: relative;
-    /* Needed for absolute positioning of overlay */
+    background-color: #eee;
 }
 
 .map-overlay-link {
@@ -97,17 +43,152 @@
     width: 100%;
     height: 100%;
     z-index: 10;
-    background: transparent;
     cursor: pointer;
+}
+
+.location-details {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.location-details h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.location-address {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.location-icon {
+    color: var(--color-accent);
+}
+
+.location-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    margin-top: auto;
+}
+
+.btn-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    width: 100%;
+}
+
+.btn-phone {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.btn-phone:hover {
+    background-color: var(--color-text-main);
+    color: var(--color-accent);
+}
+
+.btn-location:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+/* General Contact Info */
+.general-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-icon-lg {
+    color: var(--color-accent);
+    width: 32px;
+    height: 32px;
+}
+
+.contact-item h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 0.2rem;
+}
+
+.contact-item a,
+.contact-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: var(--color-primary);
+}
+
+.contact-divider {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .contact-grid {
+    .locations-grid {
         grid-template-columns: 1fr;
     }
 
-    .map-wrapper {
-        min-height: 300px;
+    .general-contact {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .contact-divider {
+        width: 60%;
+        height: 1px;
     }
 }

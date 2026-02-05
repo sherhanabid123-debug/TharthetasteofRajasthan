@@ -1,13 +1,16 @@
 .navbar {
-    background-color: var(--color-bg-light);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #050505;
+    /* Matching the deep black/navy of the logo background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    height: 80px;
+    height: 90px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    /* Subtle gold border */
 }
 
 .navbar-container {
@@ -17,52 +20,84 @@
     width: 100%;
 }
 
-.navbar-logo {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    letter-spacing: 0.05em;
+.navbar-logo-link {
+    display: flex;
+    align-items: center;
 }
 
-.logo-accent {
-    color: var(--color-accent);
+.navbar-logo-img {
+    height: 70px;
+    /* Slightly larger to command presence */
+    width: auto;
+    object-fit: contain;
+    /* Removed border-radius to blend seamlessly with the dark background */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbar-logo-link:hover .navbar-logo-img {
+    transform: scale(1.1);
 }
 
 .navbar-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     list-style: none;
 }
 
 .navbar-links a {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--color-text-main);
+    color: var(--color-text-light);
+    /* Light text for readability */
     position: relative;
+    letter-spacing: 0.5px;
+    padding-bottom: 4px;
+}
+
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-gold);
+    transition: width 0.3s ease;
 }
 
 .navbar-links a:hover {
-    color: var(--color-primary);
+    color: var(--color-accent);
+    /* Gold hover */
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
 }
 
 .navbar-cta .btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
-    padding: 0.6rem 1.5rem;
-    border-radius: 4px;
+    background: var(--gradient-gold);
+    color: #1a1a1a;
+    padding: 0.7rem 1.8rem;
+    border-radius: 2px;
+    /* Sharper, more premium edges */
     font-weight: 600;
-    transition: background-color var(--transition-fast);
+    border: 1px solid var(--color-accent);
+    transition: all var(--transition-fast);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
 .navbar-cta .btn-primary:hover {
-    background-color: var(--color-primary-dark);
+    background: transparent;
+    color: var(--color-accent);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
 .navbar-toggle {
     display: none;
     cursor: pointer;
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 .navbar-cta-mobile {
@@ -71,23 +106,33 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+    .navbar {
+        height: 80px;
+    }
+
     .navbar-links {
         position: absolute;
         top: 80px;
         left: 0;
         width: 100%;
-        background-color: var(--color-bg-light);
+        background-color: #0b0b0b;
+        /* Very dark background for menu */
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
-        padding: 2rem 0;
+        gap: 2rem;
+        padding: 3rem 0;
         transform: translateY(-150%);
-        transition: transform 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
     }
 
     .navbar-links.active {
         transform: translateY(0);
+    }
+
+    .navbar-logo-img {
+        height: 55px;
     }
 
     .navbar-toggle {

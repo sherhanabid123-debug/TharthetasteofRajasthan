@@ -9,8 +9,8 @@ import img5 from '../assets/gallery/img5.jpg';
 
 const Gallery = () => {
     const images = [
-        { id: 1, src: img1, alt: 'Restaurant Interior - Colorful Umbrellas' },
         { id: 2, src: img2, alt: 'Thar Wall Art' },
+        { id: 1, src: img1, alt: 'Restaurant Interior - Colorful Umbrellas' },
         { id: 3, src: img3, alt: 'Wall Murals' },
         { id: 4, src: img4, alt: 'Decorated Wall' },
         { id: 5, src: img5, alt: 'Dining Area' },
