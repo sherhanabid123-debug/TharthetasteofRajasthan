@@ -19,7 +19,7 @@ const About = () => {
                                 Our journey began with a simple passion: to serve authentic, home-cooked flavors that tell the story of the desert land.
                             </p>
                             <p className="about-text">
-                                From the spicy <em>Laal Maas</em> to the comforting <em>Dal Baati Churma</em>, every dish is prepared with traditional spices
+                                The comforting <em>Dal Baati Churma</em>, every dish is prepared with traditional spices
                                 and age-old recipes passed down through generations. Experience royal hospitality and a culinary voyage
                                 that will transport you straight to the palaces of Rajasthan.
                             </p>
@@ -51,8 +51,8 @@ const About = () => {
                                 </div>
                                 <div className="decorative-frame"></div>
                                 <div className="experience-badge">
-                                    <span className="years">10+</span>
-                                    <span className="label">Years of<br />Excellence</span>
+                                    <span className="years" style={{ fontSize: '2rem' }}>Est.</span>
+                                    <span className="label" style={{ fontSize: '2.5rem', lineHeight: '1' }}>2019</span>
                                 </div>
                             </div>
                         </Reveal>

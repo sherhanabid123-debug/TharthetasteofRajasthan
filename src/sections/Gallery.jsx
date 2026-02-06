@@ -1,19 +1,15 @@
 import React from 'react';
 import './Gallery.css';
 import Reveal from '../components/Reveal';
-import img1 from '../assets/gallery/img1.jpg';
-import img2 from '../assets/gallery/img2.jpg';
-import img3 from '../assets/gallery/img3.jpg';
-import img4 from '../assets/gallery/img4.jpg';
-import img5 from '../assets/gallery/img5.jpg';
+import imgAmbience from '../assets/gallery/ambience.jpg';
+import imgChowki from '../assets/gallery/chowki.jpg';
+import imgLanterns from '../assets/gallery/lanterns.jpg';
 
 const Gallery = () => {
     const images = [
-        { id: 2, src: img2, alt: 'Thar Wall Art' },
-        { id: 1, src: img1, alt: 'Restaurant Interior - Colorful Umbrellas' },
-        { id: 3, src: img3, alt: 'Wall Murals' },
-        { id: 4, src: img4, alt: 'Decorated Wall' },
-        { id: 5, src: img5, alt: 'Dining Area' },
+        { id: 1, src: imgAmbience, alt: 'Colourfull Ambience' },
+        { id: 2, src: imgChowki, alt: 'Traditional Down Sitting Chowki' },
+        { id: 3, src: imgLanterns, alt: 'Festive Rajasthani Decor' },
     ];
 
     return (

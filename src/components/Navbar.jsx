@@ -24,6 +24,7 @@ const Navbar = ({ onOpenOrder }) => {
           <li><a href="#about" onClick={toggleMenu}>About</a></li>
           <li><a href="#menu" onClick={toggleMenu}>Menu</a></li>
           <li><a href="#gallery" onClick={toggleMenu}>Gallery</a></li>
+          <li><a href="#catering" onClick={toggleMenu}>Catering</a></li>
           <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
           <li className="navbar-cta-mobile">
             <button className="btn-primary" onClick={() => { toggleMenu(); onOpenOrder(); }}>Order Online</button>

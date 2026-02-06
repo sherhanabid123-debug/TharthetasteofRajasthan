@@ -10,6 +10,7 @@ const Footer = ({ onOpenOrder }) => {
                 <div className="footer-col">
                     <img src={logo} alt="Thar - The Taste of Rajasthan" className="footer-logo-img" />
                     <p className="footer-tagline">The Taste of Rajasthan</p>
+                    <p className="footer-since">Serving since 2019</p>
                     <div className="footer-hours mt-2">
                         <h5 className="footer-subhead">Opening Hours</h5>
                         <p><Clock size={14} className="inline-icon" /> 11:30 AM - 11:30 PM</p>

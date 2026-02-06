@@ -169,3 +169,12 @@
     background-color: #cb202d;
     /* Zomato Red */
 }
+
+.footer-since {
+    font-size: 0.9rem;
+    color: var(--color-primary-dark);
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}

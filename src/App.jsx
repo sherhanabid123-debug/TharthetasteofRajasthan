@@ -5,6 +5,7 @@ import Hero from './sections/Hero';
 import Menu from './sections/Menu';
 import About from './sections/About';
 import Gallery from './sections/Gallery';
+import Catering from './sections/Catering';
 import Contact from './sections/Contact';
 import OrderModal from './components/OrderModal';
 import './App.css';
@@ -27,6 +28,7 @@ function App() {
         <About />
         <Menu />
         <Gallery />
+        <Catering />
         <Contact />
       </main>
 
