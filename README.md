@@ -1,16 +1,56 @@
-# React + Vite
+# Thar - The Taste of Rajasthan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A restaurant website built with React and Vite, showcasing the menu, gallery, and catering services for a Rajasthani restaurant.
 
-Currently, two official plugins are available:
+**Live site:** [tharthetasteofrajasthan.vercel.app](https://tharthetasteofrajasthan.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Single-page layout with Hero, About, Menu, Gallery, Catering, and Contact sections
+- Categorized menu (Must Haves, Starters, Main Course, Royal Thalis, Breads & Rice) driven from a data file, not hardcoded in components
+- Order modal for placing orders directly from the site
+- Downloadable PDF menu
+- Scroll reveal animations on section entry
+- Fully responsive layout
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech stack
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/) 19
+- [Vite](https://vite.dev/) 7
+- [React Router](https://reactrouter.com/)
+- [Lucide React](https://lucide.dev/) for icons
+- ESLint for linting
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project structure
+
+```
+src/
+  components/   Shared UI components (Navbar, Footer, OrderModal, Reveal)
+  sections/     Page sections (Hero, About, Menu, Gallery, Catering, Contact)
+  data/         Static content (menu.js)
+  assets/       Images, logo, and gallery photos
+  styles/       Global styles and CSS variables
+public/         Static files served as-is (menu.pdf, favicon)
+```
+
+## Getting started
+
+```bash
+npm install
+npm run dev
+```
+
+The app runs at `http://localhost:5173` by default.
+
+## Build
+
+```bash
+npm run build
+npm run preview   # preview the production build locally
+```
+
+## Linting
+
+```bash
+npm run lint
+```
